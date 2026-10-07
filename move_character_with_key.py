@@ -55,6 +55,8 @@ while running:
     previous_row = sprite_row
     moving = bool(dir or vertical)
     sprite_row = (100 if facing > 0 else 0) if moving else (300 if facing > 0 else 200)
+    if sprite_row != previous_row:
+        frame = 0
     x += dir * 5
     y += vertical * 5
     delay(0.05)
