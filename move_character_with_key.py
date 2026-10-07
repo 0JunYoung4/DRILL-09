@@ -46,7 +46,8 @@ while running:
     clear_canvas()
     tuk_ground.draw(CANVAS_WIDTH // 2, CANVAS_HEIGHT // 2,
                     CANVAS_WIDTH, CANVAS_HEIGHT)
-    character.clip_draw(frame*100, 100,100,100,x,90)
+    character.clip_draw(frame * SPRITE_WIDTH, 100,
+                        SPRITE_WIDTH, SPRITE_HEIGHT, x, y)
     update_canvas()
     handle_events()
     frame = (frame + 1) % FRAME_COUNT
