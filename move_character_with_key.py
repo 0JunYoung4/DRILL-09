@@ -76,6 +76,7 @@ while running:
         x += dir / length * MOVE_SPEED * dt
         y += vertical / length * MOVE_SPEED * dt
     x = max(SPRITE_WIDTH / 2, min(CANVAS_WIDTH - SPRITE_WIDTH / 2, x))
+    y = max(SPRITE_HEIGHT / 2, min(CANVAS_HEIGHT - SPRITE_HEIGHT / 2, y))
     delay(0.01)
 
 close_canvas()
