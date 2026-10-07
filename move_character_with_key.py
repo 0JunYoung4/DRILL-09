@@ -45,7 +45,7 @@ while running:
     character.clip_draw(frame*100, 100,100,100,x,90)
     update_canvas()
     handle_events()
-    frame = (frame + 1) % 8
+    frame = (frame + 1) % FRAME_COUNT
     x += dir * 5
     delay(0.05)
 
