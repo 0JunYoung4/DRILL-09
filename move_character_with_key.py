@@ -46,6 +46,7 @@ while running:
     update_canvas()
     handle_events()
     frame = (frame + 1) % FRAME_COUNT
+    dir = int(SDLK_RIGHT in pressed_keys) - int(SDLK_LEFT in pressed_keys)
     x += dir * 5
     delay(0.05)
 
