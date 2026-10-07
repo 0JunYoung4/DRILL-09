@@ -52,6 +52,8 @@ while running:
     vertical = int(SDLK_UP in pressed_keys) - int(SDLK_DOWN in pressed_keys)
     if dir:
         facing = dir
+    moving = bool(dir or vertical)
+    sprite_row = (100 if facing > 0 else 0) if moving else (300 if facing > 0 else 200)
     x += dir * 5
     y += vertical * 5
     delay(0.05)
