@@ -37,7 +37,7 @@ def handle_events():
                 dir += 1
 
 running = True
-x = 800 // 2
+x, y = CANVAS_WIDTH // 2, CANVAS_HEIGHT // 2
 frame = 0
 dir = 0
 
