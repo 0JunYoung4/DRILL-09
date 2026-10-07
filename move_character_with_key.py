@@ -25,11 +25,13 @@ MOVEMENT_KEYS = {SDLK_LEFT, SDLK_RIGHT, SDLK_UP, SDLK_DOWN}
 def handle_events():
     global running
 
-    for event in get_events():
+    events = get_events()
+    if not SDL_GetKeyboardFocus():
+        pressed_keys.clear()
+        events = [event for event in events if event.type == SDL_QUIT]
+    for event in events:
         if event.type == SDL_QUIT:
             running = False
-        elif event.type == SDL_WINDOWEVENT and event.event == SDL_WINDOWEVENT_FOCUS_LOST:
-            pressed_keys.clear()
         elif event.type == SDL_KEYDOWN:
             if event.key == SDLK_ESCAPE:
                 running = False
