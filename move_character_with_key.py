@@ -44,7 +44,8 @@ dir = 0
 # fill here
 while running:
     clear_canvas()
-    grass.draw(400, 30)
+    tuk_ground.draw(CANVAS_WIDTH // 2, CANVAS_HEIGHT // 2,
+                    CANVAS_WIDTH, CANVAS_HEIGHT)
     character.clip_draw(frame*100, 100,100,100,x,90)
     update_canvas()
     handle_events()
