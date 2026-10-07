@@ -71,8 +71,10 @@ while running:
     frame_steps = int(animation_time * ANIMATION_FPS)
     frame = (frame + frame_steps) % FRAME_COUNT
     animation_time -= frame_steps / ANIMATION_FPS
-    x += dir * MOVE_SPEED * dt
-    y += vertical * MOVE_SPEED * dt
+    length = hypot(dir, vertical)
+    if length:
+        x += dir / length * MOVE_SPEED * dt
+        y += vertical / length * MOVE_SPEED * dt
     delay(0.05)
 
 close_canvas()
