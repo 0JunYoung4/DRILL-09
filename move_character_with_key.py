@@ -14,7 +14,7 @@ character = load_image(str(ASSET_DIR / 'animation_sheet.png'))
 
 
 pressed_keys = set()
-MOVEMENT_KEYS = {SDLK_LEFT, SDLK_RIGHT}
+MOVEMENT_KEYS = {SDLK_LEFT, SDLK_RIGHT, SDLK_UP, SDLK_DOWN}
 
 
 def handle_events():
