@@ -47,7 +47,9 @@ while running:
     handle_events()
     frame = (frame + 1) % FRAME_COUNT
     dir = int(SDLK_RIGHT in pressed_keys) - int(SDLK_LEFT in pressed_keys)
+    vertical = int(SDLK_UP in pressed_keys) - int(SDLK_DOWN in pressed_keys)
     x += dir * 5
+    y += vertical * 5
     delay(0.05)
 
 close_canvas()
