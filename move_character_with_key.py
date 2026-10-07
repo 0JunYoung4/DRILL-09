@@ -1,7 +1,11 @@
 from pico2d import *
 
 
-open_canvas()
+CANVAS_WIDTH, CANVAS_HEIGHT = 1280, 1024
+SPRITE_WIDTH, SPRITE_HEIGHT = 100, 100
+FRAME_COUNT = 8
+
+open_canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
 grass = load_image('grass.png')
 character = load_image('animation_sheet.png')
 
