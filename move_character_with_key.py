@@ -42,6 +42,8 @@ frame = 0
 dir = 0
 facing = 1  # ???: 1, ??: -1
 sprite_row = 300
+animation_time = 0.0
+last_time = perf_counter()
 
 # fill here
 while running:
