@@ -13,28 +13,23 @@ tuk_ground = load_image(str(ASSET_DIR / 'TUK_GROUND.png'))
 character = load_image(str(ASSET_DIR / 'animation_sheet.png'))
 
 
-def handle_events():
-    global running, dir
+pressed_keys = set()
+MOVEMENT_KEYS = {SDLK_LEFT, SDLK_RIGHT}
 
-    # fill here
-    global x
-    events = get_events()
-    for event in events:
+
+def handle_events():
+    global running
+
+    for event in get_events():
         if event.type == SDL_QUIT:
             running = False
-        # fill here
         elif event.type == SDL_KEYDOWN:
-            if event.key == SDLK_RIGHT:
-                dir +=1
-            elif event.key == SDLK_LEFT:
-                dir -= 1
-            elif event.key == SDLK_ESCAPE:
+            if event.key == SDLK_ESCAPE:
                 running = False
+            elif event.key in MOVEMENT_KEYS:
+                pressed_keys.add(event.key)
         elif event.type == SDL_KEYUP:
-            if event.key == SDLK_RIGHT:
-                dir -= 1
-            elif event.key == SDLK_LEFT:
-                dir += 1
+            pressed_keys.discard(event.key)
 
 running = True
 x, y = CANVAS_WIDTH // 2, CANVAS_HEIGHT // 2
