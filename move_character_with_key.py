@@ -8,8 +8,9 @@ SPRITE_WIDTH, SPRITE_HEIGHT = 100, 100
 FRAME_COUNT = 8
 
 open_canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
-grass = load_image('grass.png')
-character = load_image('animation_sheet.png')
+ASSET_DIR = Path(__file__).resolve().parent
+grass = load_image(str(ASSET_DIR / 'grass.png'))
+character = load_image(str(ASSET_DIR / 'animation_sheet.png'))
 
 
 def handle_events():
