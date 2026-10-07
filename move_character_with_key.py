@@ -1,4 +1,6 @@
 from pathlib import Path
+from time import perf_counter
+from math import hypot
 
 from pico2d import *
 
