@@ -66,8 +66,13 @@ while running:
     sprite_row = (100 if facing > 0 else 0) if moving else (300 if facing > 0 else 200)
     if sprite_row != previous_row:
         frame = 0
-    x += dir * 5
-    y += vertical * 5
+        animation_time = 0.0
+    animation_time += dt
+    frame_steps = int(animation_time * ANIMATION_FPS)
+    frame = (frame + frame_steps) % FRAME_COUNT
+    animation_time -= frame_steps / ANIMATION_FPS
+    x += dir * MOVE_SPEED * dt
+    y += vertical * MOVE_SPEED * dt
     delay(0.05)
 
 close_canvas()
