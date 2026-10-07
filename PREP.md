@@ -2,7 +2,7 @@
 
 ## 목표와 요구사항
 
-기존 move_character_with_key.py를 수정하여 방향키로 소년을 상하좌우로 움직인다.
+기존 DRILL_09.py를 수정하여 방향키로 소년을 상하좌우로 움직인다.
 별도 파일이나 브랜치는 생성하지 않고 현재 main 브랜치에서 진행한다.
 
 | 요구사항 | 구현 방안 | 확인 방법 |
@@ -17,7 +17,7 @@
 
 ## 사용할 파일과 화면
 
-- 수정 대상: move_character_with_key.py, PREP.md.
+- 수정 대상: DRILL_09.py, PREP.md.
 - 화면 크기: 1280 × 1024, 시작 위치: 화면 중앙 (640, 512).
 - 배경: TUK_GROUND.png를 화면 크기로 그린다.
 - 이미지 경로: Python 파일이 있는 폴더 기준으로 계산한다.
@@ -97,7 +97,7 @@ GUI를 직접 육안 확인하지 못한 항목은 확인했다고 기록하지 
 실행 명령 (저장소 폴더에서):
 
 ~~~powershell
-.\.venv\Scripts\python.exe move_character_with_key.py
+.\.venv\Scripts\python.exe DRILL_09.py
 ~~~
 
 조작: 방향키 이동, 키를 떼면 정지, ESC 또는 창 닫기로 종료.
