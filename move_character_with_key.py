@@ -9,7 +9,7 @@ FRAME_COUNT = 8
 
 open_canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
 ASSET_DIR = Path(__file__).resolve().parent
-grass = load_image(str(ASSET_DIR / 'grass.png'))
+tuk_ground = load_image(str(ASSET_DIR / 'TUK_GROUND.png'))
 character = load_image(str(ASSET_DIR / 'animation_sheet.png'))
 
 
