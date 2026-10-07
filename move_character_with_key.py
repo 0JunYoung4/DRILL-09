@@ -36,6 +36,7 @@ x, y = CANVAS_WIDTH // 2, CANVAS_HEIGHT // 2
 frame = 0
 dir = 0
 facing = 1  # ???: 1, ??: -1
+sprite_row = 300
 
 # fill here
 while running:
