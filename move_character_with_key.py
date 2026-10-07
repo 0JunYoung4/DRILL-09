@@ -47,6 +47,9 @@ last_time = perf_counter()
 
 # fill here
 while running:
+    now = perf_counter()
+    dt = min(now - last_time, MAX_DELTA_TIME)
+    last_time = now
     clear_canvas()
     tuk_ground.draw(CANVAS_WIDTH // 2, CANVAS_HEIGHT // 2,
                     CANVAS_WIDTH, CANVAS_HEIGHT)
